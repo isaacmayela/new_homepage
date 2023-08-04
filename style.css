@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* General style */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* General style */
+
+
+body{
+    padding: 4em 9em 6em 9em;
+}
+
+/* BIGINING OF THE HEADER */
+
+header{
+    margin-bottom: 3em;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo p{
+    font-size: 3em;
+    font-family: 'Lobster', cursive;
+}
+
+.menu ul{
+    display: flex;
+    gap: 2em;
+}
+
+.menu_toggle{
+    display: none;
+    color: black;
+    font-size: 2.5em;
+}
+
+.menu ul li a {
+    color: rgb(108, 108, 108);
+}
+
+.menu ul li a:hover {
+    color: #ed3f32;
+    transition: all 0.33s;
+}
+
+/* BIGINING OF THE MAIN */
+
+main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.3em;
+}
+
+
+/* first section */
+
+.first_section{
+    grid-column: 1 / 9;
+}
+
+.desktop_image{
+    width: 100%;
+}
+
+.mobile_image{
+    display: none;
+    width: 100%;
+}
+
+.bright_future{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 1.5em;
+}
+
+.bright_future .caption{
+    grid-column: 1 / 2;
+}
+
+.bright_future .caption p{
+    font-size: 3em;
+    font-weight: 600;
+    line-height: 1em;
+    width: 6em;
+}
+
+.description{
+    grid-column: 2 / 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description a{
+    background-color: #ed3f32;
+    color: #fff;
+    padding: 0.5em 1em;
+    width: 8em;
+}
+
+.description a:hover{
+    background-color: #00011a;
+    transition: all 0.33s;
+}
+
+/* first section */
+
+
+/* Secon section */
+.second_section{
+    background-color: #00011a;
+    grid-column: 9 / 13;
+    padding: 2em 1em 0 1em;
+    color: #fff;
+}
+
+.second_section h3{
+    font-size: 1.7em;
+    color: #f4a535;
+}
+
+.new_divs {
+    padding: 2.5em 0;
+}
+
+.new_divs a{
+    font-size: 1em;
+    color: #fff;
+}
+
+.new_divs a{
+    font-size: 1.2em;
+    font-weight: 600
+}
+
+.new_divs a:hover{
+    color: #f4a535;
+    transition: all 0.33s;
+}
+
+.new_divs p{
+    font-weight: 100
+}
+
+.middle{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+/* Secon section */
+
+/* BEGINING FOOTER */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4em;
+}
+
+.reviving, .laptop, .gaming{
+    display: flex;
+    gap: 1.5em;
+    margin-bottom: 2em;
+}
+
+.reviving{
+    grid-column: 1 / 2;
+}
+
+.laptop{
+    grid-column: 2 / 3;
+}
+
+.gaming{
+    grid-column: 3 / 4;
+}
+
+footer div img{
+    width: 6em;
+}
+
+footer div h3{
+    font-size: 2em;
+    color: rgb(195, 195, 195);
+}
+
+.image_description h3{
+    margin-bottom: 0.4em;
+}
+
+.image_description a{
+    color: black;
+    font-weight: 900;
+}
+
+.image_description a:hover{
+    color: #ed3f32;
+    transition: all 0.33s;
+}
+
+.image_description p{
+    padding-top: 0.6em;
+}
+
+
+/* media queries */
+
+@media screen and (max-width:500px){
+
+    body{
+        padding: 1em 1em 2em 1em;
+    }
+
+    #menu-mobile{
+        display: none;
+        transition: all 0.50s;
+    }
+
+    #menu-mobile.active{
+        display: block;
+        position: absolute;
+        top:0;
+        right: 0;
+        background-color: #fff;
+        width: 75%;
+        height: 100vh;
+        transition: all 0.50s;
+        /* display: none; */
+    }
+
+    .menu ul{
+        display: block;
+        padding: 2rem 0 0 1rem;
+        margin-top: 5em;
+        /* flex-direction: column; */
+    } 
+
+    .menu ul li{
+        margin-bottom: 2em;
+        /* flex-direction: column; */
+    } 
+
+    .menu_toggle{
+        display: block;
+        z-index: 999;  
+    }
+
+    /* #icon_humberger{
+       display: none; 
+    } */
+
+    /* #icon-cross{
+        color: black;
+        width: 100px;
+        z-index: 999;
+    } */
+
+    main, footer, .bright_future{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .desktop_image{
+       display: none;
+    }
+
+    .mobile_image{
+        display: block;
+    }
+    .description a{
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+    .bright_future .caption{
+        margin-bottom: 1em;
+    }
+}
